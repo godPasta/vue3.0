@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <div style="display:flex;justify-content: space-between;">
+      123123
       <HelloWorld
         v-for="(blogPost,index) in list"
         :post="blogPost"
@@ -15,8 +16,8 @@
 
 <script lang="ts">
 import {Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-import vuejsx from "@/components/vuejsx.js"; // @ is an alias to /src
+import  HelloWorld from "./../components/HelloWorld.vue"; // @ is an alias to /src
+import vuejsx from "./../components/vuejsx.js"; // @ is an alias to /src
 
 @Component({
   components: {
@@ -26,6 +27,7 @@ import vuejsx from "@/components/vuejsx.js"; // @ is an alias to /src
 })
 export default class Home extends Vue {
   user: Array<Object> = [{}];
+  // name: String = '123'
   // 显示的list
   list: Array<object> = [{}];
   // 生成10条数据方法

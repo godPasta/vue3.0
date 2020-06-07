@@ -5,7 +5,8 @@
     <p class="meta">{{ post.author }}</p>
     <p style="border:1px solid red;">{{ sortName }}</p>
     <p style="border-bottom:1px solid gray">
-      <b>{{ user.name }}</b>说“{{ user.info }}”
+      <b>{{ user.name }}</b
+      >说“{{ user.info }}”
     </p>
   </div>
 </template>
@@ -30,6 +31,7 @@ export interface User {
 export default class HelloWorld extends Vue {
   @Prop() post!: Post;
   @Prop() user!: User;
+  name: String = '234'
   get date() {
     return `${this.post.datePosted.getDate()}/${this.post.datePosted.getMonth()}/${this.post.datePosted.getFullYear()}`;
   }
@@ -45,7 +47,7 @@ export default class HelloWorld extends Vue {
       "六" = 6,
       "七" = 7,
       "八" = 8,
-      "九" = 9
+      "九" = 9,
     }
     let tName: string = NameArr[Math.random() * 10] || name;
     // this.sortName =`${Math.floor(Math.random()*10)}`
